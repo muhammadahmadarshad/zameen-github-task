@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/header';
 import Content from './pages/content';
@@ -17,6 +17,7 @@ function App() {
             <Route exact path='/gist-content/:id'>
               <Content/>
             </Route>
+            <Redirect to='/search'/>
           </Switch>
         </BrowserRouter>
         
