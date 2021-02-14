@@ -7,9 +7,6 @@ const RepoItem = ({gist}) => {
     Object.keys(gist.files).forEach(file=>{
         files.push(gist.files[file].language);
     })
-
-    files= new Set(files);
-    files = [...files];
     return ( 
         <>          
          <Table className='mt-5' striped>
